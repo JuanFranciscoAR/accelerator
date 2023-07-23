@@ -1,11 +1,29 @@
-          <!-- Header -->
-					<header id="header">
+
+           
+         
+            <!-- Header -->
+                    <header id="header">
 						<h1>Conóceme</h1>
-            <nav class="navbar bg-body-tertiary">
-              <form class="container-fluid justify-content-start">
-                    <%= link_to "Mis fotografías",root_path, class: "btn btn-primary" %>
-              </form>
-            </nav>
+                        <nav class="navbar bg-body-tertiary">
+                            <form class="container-fluid justify-content-start">
+
+<%= link_to "Mis fotografías", root_path, class: "btn btn-primary", id: "btnRedirectReload" %>
+
+<script>
+  document.getElementById("btnRedirectReload").addEventListener("click", function() {
+    // Redirige a la nueva página
+    window.location.href = "<%= root_path %>";
+
+    // Recarga la página después de 1 segundo (1000 milisegundos)
+    setTimeout(function() {
+      location.reload();
+    }, 1000);
+  });
+</script>
+
+
+                        </form>
+                        </nav>
  
 						<p>Tomadas en de mis viajes <a href="http://html5up.net/lens"> - Link Lens</a></p>
 						<ul class="icons">
@@ -15,29 +33,82 @@
 							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 					</header>
-                       
-          
-          <!-- Thumbnail -->
+
+ <!-- Thumbnail -->
 					<section id="thumbnails">
 						<article>
                 <%= link_to image_path('fulls/01.jpg'), class: "thumbnail", data: { position: "left center" } do %>
+                    <%= image_tag '', alt: "" %>
                     <% end %>
 
 							<h2>Diam tempus accumsan</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</article>
-										
-					</section>
-                
-                    	<section id="thumbnails">
-                    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta lorem et iaculis ornare.
-                 Vestibulum vitae ex nunc. Suspendisse bibendum pharetra neque eu hendrerit. Donec ut lectus id puru metus.
-                  Ut nunc est, maximus nec placerat non, vehicula non augue. Duis neque purus, faucibus sed ante
-                 .
-                  </p>
-                  				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta lorem et iaculis ornare.
-                 Vestibulum vitae ex nused ante
-                  Ut nunc est, maximus nec placerat non, vehicula non augue. Duis neque purus, faucibus sed ante.
-                  </p>
+						<article>
+                <%= link_to image_path('fulls/02.jpg'), class: "thumbnail" do %>
+                    <%= image_tag '', alt: "" %>
+                    <% end %>
+						
+							<h2>Vivamus convallis libero</h2>
+							<p>Sed velit lacus, laoreet at venenatis convallis in lorem tincidunt.</p>
+						</article>
+						<article>
+                <%= link_to image_path('fulls/03.jpg'), class: "thumbnail" do %>
+                                    <%= image_tag '', alt: "" %>
+                                    <% end %>
 
-                  	</section>
+							<h2>Nec accumsan enim felis</h2>
+							<p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+						</article>
+						<article>
+                <%= link_to image_path('fulls/04.jpg'), class: "thumbnail" do %>
+                                    <%= image_tag '', alt: "" %>
+                                    <% end %>
+							<h2>Donec maximus nisi eget</h2>
+							<p>Tristique in nulla vel congue. Sed sociis natoque parturient nascetur.</p>
+						</article>
+						<article>
+                <%= link_to image_path('fulls/05.jpg'), class: "thumbnail" do %>
+                                    <%= image_tag '', alt: "" %>
+                                    <% end %>
+							<h2>Nullam vitae nunc vulputate</h2>
+							<p>In pellentesque cursus velit id posuere. Donec vehicula nulla.</p>
+						</article>
+						<article>
+                <%= link_to image_path('fulls/06.jpg'), class: "thumbnail" do %>
+                                    <%= image_tag '', alt: "" %>
+                                    <% end %>
+							<h2>Phasellus magna faucibus</h2>
+							<p>Nulla dignissim libero maximus tellus varius dictum ut posuere magna.</p>
+						</article>
+						<article>
+                <%= link_to image_path('fulls/07.jpg'), class: "thumbnail" do %>
+                                    <%= image_tag '', alt: "" %>
+                                    <% end %>
+							<h2>Proin quis mauris</h2>
+							<p>Etiam ultricies, lorem quis efficitur porttitor, facilisis ante orci urna.</p>
+						</article>
+						<article>
+                <%= link_to image_path('fulls/08.jpg'), class: "thumbnail" do %>
+                                    <%= image_tag '', alt: "" %>
+                                    <% end %>
+							<h2>Gravida quis varius enim</h2>
+							<p>Nunc egestas congue lorem. Nullam dictum placerat ex sapien tortor mattis.</p>
+						</article>
+				
+						</article>
+					</section>
+
+                    
+
+                    <section id="thumbnails">
+                    		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta lorem et iaculis ornare.
+                                Vestibulum vitae ex nunc. Suspendisse bibendum pharetra neque eu hendrerit. Donec ut lectus id puru metus.
+                                Ut nunc est, maximus nec placerat non, vehicula non augue. Duis neque purus, faucibus sed ante.
+                            </p>
+
+                  		    <p> 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta lorem et iaculis ornare.
+                                Vestibulum vitae ex nused ante Ut nunc est, maximus nec placerat non, vehicula non augue. Duis neque purus, faucibus sed ante.
+                            </p>
+                    </section>

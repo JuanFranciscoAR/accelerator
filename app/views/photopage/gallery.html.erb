@@ -1,9 +1,30 @@
+
+
+
+
+          
+          
           <!-- Header -->
-					<header id="header">
-						<h1>Mis fotografías</h1>
+
+          
+		<header id="header">
+			   <h1>Mis fotografías</h1>
             <nav class="navbar bg-body-tertiary">
-              <form class="container-fluid justify-content-start">
-                    <%= link_to "Conóceme",photopage_about_path, class: "btn btn-primary" %>
+                <form class="container-fluid justify-content-start">
+<%= link_to "Conóceme", photopage_about_path, class: "btn btn-primary", id: "btnRedirectReload" %>
+
+<script>
+  document.getElementById("btnRedirectReload").addEventListener("click", function() {
+    // Redirige a la nueva página
+    window.location.href = "<%= photopage_about_path %>";
+
+    // Recarga la página después de 1 segundo (1000 milisegundos)
+    setTimeout(function() {
+      location.reload();
+    }, 1000);
+  });
+</script>
+
               </form>
             </nav>
  
@@ -14,7 +35,7 @@
 							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
 							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
-					</header>
+		</header>
                        
           
           <!-- Thumbnail -->
@@ -81,3 +102,5 @@
 				
 						</article>
 					</section>
+
+                    
