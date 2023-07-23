@@ -1,2 +1,43 @@
-<h1>Photopage#about</h1>
-<p>Find me in app/views/photopage/about.html.erb</p>
+          <!-- Header -->
+					<header id="header">
+						<h1>Conóceme</h1>
+            <nav class="navbar bg-body-tertiary">
+              <form class="container-fluid justify-content-start">
+                    <%= link_to "Mis fotografías",root_path, class: "btn btn-primary" %>
+              </form>
+            </nav>
+ 
+						<p>Tomadas en de mis viajes <a href="http://html5up.net/lens"> - Link Lens</a></p>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fab fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</header>
+                       
+          
+          <!-- Thumbnail -->
+					<section id="thumbnails">
+						<article>
+                <%= link_to image_path('fulls/01.jpg'), class: "thumbnail", data: { position: "left center" } do %>
+                    <% end %>
+
+							<h2>Diam tempus accumsan</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</article>
+										
+					</section>
+                
+                    	<section id="thumbnails">
+                    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta lorem et iaculis ornare.
+                 Vestibulum vitae ex nunc. Suspendisse bibendum pharetra neque eu hendrerit. Donec ut lectus id puru metus.
+                  Ut nunc est, maximus nec placerat non, vehicula non augue. Duis neque purus, faucibus sed ante
+                 .
+                  </p>
+                  				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta lorem et iaculis ornare.
+                 Vestibulum vitae ex nused ante
+                  Ut nunc est, maximus nec placerat non, vehicula non augue. Duis neque purus, faucibus sed ante.
+                  </p>
+
+                  	</section>
